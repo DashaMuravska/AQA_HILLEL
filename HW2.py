@@ -144,20 +144,17 @@ plates_list = ['HH9901CC', 'CA9150WC', 'BH7144WB', 'AI7665KU', 'AI8045DS', 'HH12
 
 
 def uniq():
-    len_plates_list = len(plates_list)
     set_plates_list = set(plates_list)
     len_set = len(set_plates_list)
-    unique = len_plates_list - len_set
-    print("Number of unique license plates: ", unique)
+    print("Number of unique license plates: ", len_set)
 
 
 def presence(a):
-    str_plates_list = " ".join(plates_list)
-    str_plates_list = str_plates_list.lower()
-    if a.lower() in str_plates_list:
-        print("Entered plate is in list!")
+    a = a.upper()
+    if a in plates_list:
+        print("Entered plate is in the list!")
     else:
-        print("Entered plate is not in list!")
+        print("Entered plate is not in the list!")
 
 
 def sum_num(b):
